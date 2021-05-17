@@ -6,12 +6,21 @@
         text-transform: uppercase;
         line-height: 29px;
         color: #000000;
+
+        @include tablet-style() {
+            @include font($font-size: 16px, $font-weight: 300, $line-height: 19px);
+        }
     }
     
     &__description {
         @include font($font-size: 24px, $font-weight: 300, $line-height: 29px);
         color: #000000;
         margin: 20px 0;
+
+        @include tablet-style() {
+            @include font($font-size: 16px, $font-weight: 300, $line-height: 19px);
+            margin: 32px 0 20px 0;
+        }
     }
     
     &__list-item {
@@ -20,6 +29,10 @@
         color: #000000;
         margin: 0 0 16px 0;
         padding: 0 0 0 43px;
+
+        @include tablet-style() {
+            @include font($font-size: 16px, $font-weight: 300, $line-height: 19px);
+        }
     }
     
     &__list-item::before {
