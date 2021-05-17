@@ -7,6 +7,12 @@
     &__header {
         height: 448px;
         @include flex-center-space-between();
+
+        @include tablet-style() {
+            height: auto;
+            display: block;
+            padding: 58px 0 140px 0;
+        }
     }
     
     &__manager-block, 
@@ -21,6 +27,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: center;
+
+        @include tablet-style() {
+            margin: 0 auto 80px auto;
+        }
     }
     
     &__description-manager {
@@ -36,7 +46,14 @@
         flex-direction: column;
         justify-content: center;
 
-    
+        @include tablet-style() {
+            max-width: 360px;
+            margin: 0 auto;
+        }
+
+        @include mobile-landscape-style() {
+            max-width: 100%;
+        }
     }
     
     &__caption-subscribe {
@@ -49,11 +66,20 @@
         text-transform: uppercase;
         color: #222224;
         margin: 10px 0 0 0;
+
+        @include mobile-landscape-style() {
+            text-align: center;
+            @include font-size-weight(14px, 700);
+        }
     }
     
     &__form-subscribe {
         display: flex;
         margin: 30px 0 0 0;
+
+        @include mobile-landscape-style() {
+            width: 100%;
+        }
     }
     
     &__form-input {
@@ -63,6 +89,11 @@
         border: none;
         background: #E1E1E1;
         padding: 0 0 0 22px;
+
+        @include mobile-landscape-style() {
+            width: auto;
+            flex: 1 1 auto;
+        }
     }
     
     &__form-input::placeholder {
@@ -80,6 +111,11 @@
         color: #fff;
         cursor: pointer;
         transition: 0.3s;
+
+        @include mobile-landscape-style() {
+            width: auto;
+            flex: 0 1 96px;
+        }
     }
     
     &__form-button:hover {
@@ -89,17 +125,34 @@
     &__bottom {
         height: 79px;
         background: #222224;
+
+        .width-1600 {
+            height: 100%;
+        }
+
+        @include mobile-landscape-style() {
+            height: auto;
+        }
     }
     
     &__wrapper-bottom {
         @include flex-center-space-between();
         height: 100%;
+
+        @include mobile-landscape-style() {
+        flex-direction: column-reverse;
+        padding: 43px 0 9px 0;
+        }
     }
     
     &__copyright {
         font-size: 16px;
         line-height: 19px;
         color: #FBFBFB;
+
+        @include mobile-landscape-style() {
+            margin: 40px 0 0 0;
+        }
     }
 
     &__icon-social {

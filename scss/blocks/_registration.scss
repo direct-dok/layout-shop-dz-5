@@ -1,14 +1,41 @@
 .registration {
-    padding: 64px 0 96px 0;
+    padding: 64px 16px 96px 16px;
     display: flex;
     justify-content: space-between;
 
+    @include tablet-style() {
+        padding: 40px 16px 96px 16px;
+    }
+
+    @include mobile-landscape-style() {
+        flex-direction: column;
+    }
+
     &__wrapper-form {
         max-width: 360px;
+        padding: 0 24px 0 0;
+
+        @include tablet-style() {
+            flex: 1 1 50%;
+        }
+
+        @include mobile-landscape-style() {
+            flex: 1 1 100%;
+            max-width: 100%;
+            padding: 0;
+        }
     }
     
     &__perks {
         max-width: 650px;
+
+        @include tablet-style() {
+            flex: 1 1 50%;
+        }
+
+        @include mobile-landscape-style() {
+            margin: 40px 0 0 0;
+        }
     }
     
     &__legend-form {
@@ -52,6 +79,19 @@
         box-sizing: border-box;
         margin: 0 10px 0 0;
     }
+
+    &__radio:checked {
+        border-color: $pink-hover-color;
+    }
+
+    &__radio:checked::before {
+        content: '';
+        display: block;
+        width: 17px;
+        height: 17px;
+        background: $pink-hover-color;
+        @include border-radius(50%);
+    }
     
     &__label-radio {
         @include font(11px, 300, 13px);
@@ -80,6 +120,11 @@
         text-transform: uppercase;
         color: #FFFFFF;
         cursor: pointer;
+        transition: .3s;
+    }
+
+    &__submit:hover {
+        background: $pink-hover-color;
     }
     
     &__wrapper-button {

@@ -40,3 +40,15 @@
     -moz-box-shadow: $code-shadow;
     box-shadow: $code-shadow;
 }
+
+@mixin tablet-style() {
+    @media (max-width: $max-tablet-width) {
+        @content;
+    }
+}
+
+@mixin mobile-landscape-style() {
+    @media screen and (max-width: $max-mobile-landscape-width) {
+        @content;
+    }
+}

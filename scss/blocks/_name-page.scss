@@ -5,6 +5,10 @@
     &__block-caption {
         @include flex-align-items-center();
         height: 100%;
+
+        @include mobile-landscape-style() {
+            justify-content: center;
+        }
     }
     
     &__main-caption {
