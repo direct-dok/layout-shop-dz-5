@@ -1,0 +1,113 @@
+.footer {
+    background: url(../img/footer-background.jpg);
+    background-repeat: no-repeat;
+    background-position: left bottom;
+    background-size: cover;
+
+    &__header {
+        height: 448px;
+        @include flex-center-space-between();
+    }
+    
+    &__manager-block, 
+    &__subscribe-block {
+        height: 100%;
+    }
+    
+    &__manager-block {
+        max-width: 360px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    &__description-manager {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: #222224;
+        margin: 30px 0 0 0;
+    }
+    
+    &__subscribe-block {
+        @include flex-align-items-center();
+        flex-direction: column;
+        justify-content: center;
+
+    
+    }
+    
+    &__caption-subscribe {
+        @include font-size-weight(24px, 700);
+        text-transform: uppercase;
+        color: #222224;
+    }
+    
+    &__description-subscribe {
+        text-transform: uppercase;
+        color: #222224;
+        margin: 10px 0 0 0;
+    }
+    
+    &__form-subscribe {
+        display: flex;
+        margin: 30px 0 0 0;
+    }
+    
+    &__form-input {
+        width: 256px;
+        height: 49px;
+        @include border-radius(30px 0 0 30px);
+        border: none;
+        background: #E1E1E1;
+        padding: 0 0 0 22px;
+    }
+    
+    &__form-input::placeholder {
+        color: #222224;
+    }
+    
+    &__form-button {
+        width: 100px;
+        height: 49px;
+        border: none;
+        background: #F16D7F;
+        @include border-radius(0 30px 30px 0);
+        font-size: 14px;
+        line-height: 17px;
+        color: #fff;
+        cursor: pointer;
+        transition: 0.3s;
+    }
+    
+    &__form-button:hover {
+        background: #E05C6E;
+    }
+    
+    &__bottom {
+        height: 79px;
+        background: #222224;
+    }
+    
+    &__wrapper-bottom {
+        @include flex-center-space-between();
+        height: 100%;
+    }
+    
+    &__copyright {
+        font-size: 16px;
+        line-height: 19px;
+        color: #FBFBFB;
+    }
+
+    &__icon-social {
+        fill: #fff;
+    }
+
+    &__icon-social:hover {
+        fill: $pink-color-caption;
+    }
+}
+

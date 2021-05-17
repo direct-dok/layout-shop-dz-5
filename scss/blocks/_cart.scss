@@ -1,0 +1,184 @@
+.cart {
+    padding: 96px 0 128px 0;
+    display: flex;
+    justify-content: space-between;
+
+    &__product {
+        -webkit-flex-basis: 652px; 
+        flex-basis: 652px;
+    }
+
+    &__product-item {
+        position: relative;
+        display: flex;
+        
+        @include box-shadow(17px 19px 24px rgba(0, 0, 0, 0.13));
+        margin: 0 0 40px 0;
+    }
+
+   &__product-item:last-child {
+        margin: 0;
+    }
+
+    &__delete-icon-product {
+        position: absolute;
+        top: 28px;
+        right: 22px;
+        cursor: pointer;
+    }
+
+    &__info-product {
+        padding: 22px 0 0 31px;
+    }
+
+    &__name-product {
+        max-width: 262px;
+        @include font-size-line-height(24px, 29px);
+        text-transform: uppercase;
+    }
+
+    &__items-info-product {
+        margin: 42px 0 0 0;
+    }
+
+    &__item-info-product {
+        margin: 0 0 6px 0;
+        @include font-size-line-height(22px, 26px);
+    }
+
+    &__property-product, 
+    &__value-product {
+        color: #575757;
+    }
+
+    &__value-product--price {
+        color: $pink-color-caption;
+    }
+
+    &__quantity-product {
+        @include font-size-line-height(18px, 22px);
+        color: #656565;
+        text-align: center;
+        width: 43px;
+        height: 24px;
+        margin: 0 0 0 24px;
+        border: 1px solid #EAEAEA;
+    }
+
+    &__control-wrapper-button {
+        margin: 72px 0 0 0;
+        @include flex-center-space-between();
+    }
+
+    &__control-button {
+        @include font(14px, 300, 17px);
+        color: #000000;
+        text-transform: uppercase;
+        height: 49px;
+        padding: 0 39px;
+        background: #fff;
+        border: 1px solid #A4A4A4;
+        cursor: pointer;
+    }
+
+    &__form-adress-total-price {
+        -webkit-flex-basis: 359px; 
+        flex-basis: 359px;
+    }
+
+    &__form-adress {
+        padding: 13px 0 0 0;
+    }
+
+    &__form-caption {
+        @include font(16px, 300, 19px);
+        text-transform: uppercase;
+    }
+
+    &__wrapper-field-form {
+        margin: 20px 0 0 0;
+    }
+
+    &__label-form {
+        display: none;
+    }
+
+    &__input-form {
+        box-sizing: border-box;
+        width: 100%;
+        height: 45px;
+        padding: 0 0 0 17px;
+        border: 1px solid #A4A4A4;
+
+    }
+
+    &__input-form::placeholder {
+        @include font(13px, 300, 16px);
+        color: $black-color;
+    }
+
+    &__wrapper-button-form {
+        margin: 23px 0 0 0;
+    }
+
+    &__submit-button-form {
+        @include font(11px, 300, 13px);
+        text-transform: uppercase;
+        color: #A4A4A4;
+        width: 101px;
+        height: 35px;
+        background: #fff;
+        border: 1px solid #A4A4A4;
+        cursor: pointer;
+    }
+
+    &__total-price {
+        margin: 58px 0 0 0;
+        padding: 43px;
+        background: #F5F3F3;
+    }
+
+    &__total-info {
+        border-bottom: 1px solid #E2E2E2;
+        padding: 0 0 21px 0;
+        margin: 0 0 17px 0;
+    }
+
+    &__sub-total {
+        @include font(11px, 300, 13px);
+        text-transform: uppercase;
+        color: #4A4A4A;
+        text-align: right;
+    }
+
+    &__sub-property {
+        margin: 0 20px 0 0;
+    }
+
+    &__grand-total {
+        @include font(16px, 300, 19px);
+        text-transform: uppercase;
+        text-align: right;
+        color: #222222;
+        margin: 12px 0 0 0;
+    }
+
+    &__grand-value {
+        font-weight: 700;
+        color: $pink-color-caption;
+        margin: 0 0 0 20px;
+    }
+
+    &__checkout-button {
+        @include font(16px, 300, 19px);
+        color: #fff;
+        text-transform: uppercase;
+        width: 100%;
+        height: 50px;
+        background: $pink-color-caption;
+        border: none;
+        cursor: pointer;
+    }
+
+
+}

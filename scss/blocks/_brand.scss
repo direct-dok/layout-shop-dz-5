@@ -1,0 +1,42 @@
+.brand {
+    height: 764px;
+    background: $pink-color;
+
+    &__wrapper {
+        height: 100%;
+        max-width: 1600px;
+        margin: 0 auto;
+        display: flex;
+    }
+    
+    &__text {
+        @include flex-align-items-center();
+        padding: 0 0 0 84px;
+        text-transform: uppercase;
+    }
+    
+    &__caption-block {
+        position: relative;
+        padding: 4px 28px;
+    }
+    
+    &__caption-block::before {
+        content: "";
+        position: absolute;
+        width: 12px;
+        height: 100%;
+        left: 0;
+        top: 0;
+        background: $pink-color-caption;
+    }
+    
+    &__caption {
+        @include font-size-weight(48px, 900);
+        margin: 0 0 5px 0;
+    }
+    
+    &__subcaption {
+        @include font-size-weight(28px, 700);
+    }
+}
+

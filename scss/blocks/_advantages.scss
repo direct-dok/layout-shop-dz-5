@@ -1,0 +1,26 @@
+.advantages {
+    height: 340px;
+    background: #222224;
+
+    &__list {
+        @include flex-center-space-between();
+        height: 100%;
+    }
+    
+    &__item {
+        width: 360px;
+        text-align: center;
+    }
+    
+    &__caption {
+        @include font(20px, 400, 24px);
+        color: #FBFBFB;
+        margin: 28px 0 16px 0;
+    }
+    
+    &__description {
+        @include font(14px, 300, 17px);
+        color: #FBFBFB;
+    }
+}
+
